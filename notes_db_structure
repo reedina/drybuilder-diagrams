@@ -1,0 +1,8 @@
+State Container Data structures
+-------------------------------------------------
+(1) aws_regions  -> rest service
+(2) aws_instance_types  -> rest service
+(3) aws_auth  -> rest service
+(4) packer_builder types with associated ami filters  -> rest service
+(5) packer_builders  -> rest service 
+(6) packer_templates  -> rest service  (template with associated builders, need to visualize builder fully)
