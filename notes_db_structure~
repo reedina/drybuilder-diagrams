@@ -6,3 +6,14 @@ State Container Data structures
 (4) packer_builder types with associated ami filters  -> rest service
 (5) packer_builders  -> rest service 
 (6) packer_templates  -> rest service  (template with associated builders, need to visualize builder fully)
+
+SELECT e.E_ID, e.E_Name, e.E_Designayion, s.S_ID, s.S_Name
+FROM EMPLOYEE AS e
+ INNER JOIN EMP_SKILL AS es ON es.E_ID = e.E_ID
+ INNER JOIN SKILLS AS s ON s.S_ID = es.S_ID
+
+
+SELECT  pt.friendly_name, pt.description, pb.ami_name, pb.aws_auth_id
+FROM packer_templates  AS pt
+ INNER JOIN packer_templates_builders AS jt ON pt.id = jt.packer_templates_id
+ INNER JOIN packer_builders AS pb ON pb.id = jt.packer_builders_id
